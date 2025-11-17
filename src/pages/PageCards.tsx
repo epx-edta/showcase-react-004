@@ -17,7 +17,8 @@ export const PageCards = () => {
     {
       id: 1,
       title: "Jane Doe",
-      content: "Switching to modern software has transformed our workflow. Tasks that used to take hours are now completed in minutes, and our team collaborates more efficiently than ever.",
+      content: "Switching to modern software has transformed our workflow. Tasks that used to take hours are now completed in minutes, and our team collaborates more efficiently than ever."
+        + " The onboarding process was simple and the interface is very user-friendly.",
       color: "bg-orange-500"
     },
     {
@@ -29,19 +30,19 @@ export const PageCards = () => {
     {
       id: 3,
       title: "Emily Johnson",
-      content: "Excellent support and regular updates keep our software running smoothly. We appreciate the dedication to user experience and reliability.",
+      content: "Excellent support and regular updates keep our software running smoothly.",
       color: "bg-teal-900"
     },
     {
       id: 4,
       title: "Michael Lee",
-      content: "Implementing this software was a game changer for our business. Automation features have saved us countless hours and reduced errors.",
+      content: "Implementing this software was a game changer for our business. Automation features have saved us countless hours and reduced errors. We now have more time to focus on our clients and innovation, rather than manual tasks.",
       color: "bg-blue-600"
     },
     {
       id: 5,
       title: "Sophia Brown",
-      content: "Highly recommended! The software is flexible, secure, and adapts perfectly to our growing needs. Our productivity has never been higher.",
+      content: "Highly recommended! The software is flexible, secure, and adapts perfectly to our growing needs.",
       color: "bg-purple-600"
     }
   ];
@@ -101,7 +102,7 @@ export const PageCards = () => {
                 className={`${card.color} text-white rounded-2xl p-6 shadow-lg flex-shrink-0 select-none`}
                 style={{ 
                   width: '350px',
-                  minHeight: '200px'
+                  minHeight: '300px'
                 }}
               >
                 <p className="text-sm leading-relaxed mb-4">
