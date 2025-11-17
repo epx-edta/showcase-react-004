@@ -11,7 +11,7 @@ interface IAppProvider {
 export const AppContext = createContext<IAppContext>({} as IAppContext);
 
 export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
-	const [message] = useState("Welcome to the Info Site.");
+	const [message] = useState("This site is an environment to test out React features before they are implemented in other projects.");
 
 	return (
 		<AppContext.Provider

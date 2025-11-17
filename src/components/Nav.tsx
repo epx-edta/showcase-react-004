@@ -11,8 +11,8 @@ const menuItems = [
 		title: 'Welcome'
 	},
 	{
-		idCode: 'info',
-		title: 'Info'
+		idCode: 'cards',
+		title: 'Cards'
 	},
 	{
 		idCode: 'about',
