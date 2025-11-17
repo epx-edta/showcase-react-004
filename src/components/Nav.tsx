@@ -1,38 +1,37 @@
-
 import { NavLink } from "react-router-dom";
-import { useLocation } from 'react-router-dom';
-import * as tools from '../tools';
+import { useLocation } from "react-router-dom";
+import * as tools from "../tools";
 import { GiHamburgerMenu } from "react-icons/gi";
 import React, { useState } from "react";
 
 const menuItems = [
 	{
-		idCode: 'welcome',
-		title: 'Welcome',
-		description: '',
+		idCode: "welcome",
+		title: "Welcome",
+		description: "",
 	},
 	{
-		idCode: 'cards1',
-		title: 'Cards1',
+		idCode: "cards1",
+		title: "Cards1",
 		description: "Horizontal scrolling cards with finite scroll",
 	},
 	{
-		idCode: 'cards2',
-		title: 'Cards2',
+		idCode: "cards2",
+		title: "Cards2",
 		description: "Horizontal scrolling cards with 2x scroll",
-	}
-]
+	},
+];
 
 export const Nav = () => {
 	const [showMobileMenu, setShowMobileMenu] = useState(false);
 
 	const location = useLocation();
-	const pageIdCode = tools.chopLeft(location.pathname, '/');
-	const currentMenuItem = menuItems.find(m => m.idCode === pageIdCode);
+	const pageIdCode = tools.chopLeft(location.pathname, "/");
+	const currentMenuItem = menuItems.find((m) => m.idCode === pageIdCode);
 
 	const handleMenuToggle = () => {
-		setShowMobileMenu(!showMobileMenu)
-	}
+		setShowMobileMenu(!showMobileMenu);
+	};
 
 	return (
 		<>
@@ -40,22 +39,40 @@ export const Nav = () => {
 				<nav>
 					<div className="md:hidden bg-slate-500 text-[1.2rem] px-4 py-2 content">
 						<div className="flex justify-between">
-							<p><NavLink to={currentMenuItem.idCode}>{currentMenuItem.title}</NavLink></p>
-							<p className="mt-1 cursor-pointer" onClick={handleMenuToggle}><GiHamburgerMenu /></p>
+							<p>
+								<NavLink to={currentMenuItem.idCode}>
+									{currentMenuItem.title}
+								</NavLink>
+							</p>
+							<p
+								className="mt-1 cursor-pointer"
+								onClick={handleMenuToggle}
+							>
+								<GiHamburgerMenu />
+							</p>
 						</div>
 						{showMobileMenu && (
 							<div>
 								{menuItems.map((menuItem, index) => {
 									return (
 										<div key={index}>
-											{(menuItem.idCode !== currentMenuItem.idCode && (
-												<div
-												className="mt-[.2rem]"	
-												><NavLink to={menuItem.idCode}
-													onClick={() => setShowMobileMenu(false)}>{menuItem.title}</NavLink></div>
-											))}
+											{menuItem.idCode !==
+												currentMenuItem.idCode && (
+												<div className="mt-[.2rem]">
+													<NavLink
+														to={menuItem.idCode}
+														onClick={() =>
+															setShowMobileMenu(
+																false
+															)
+														}
+													>
+														{menuItem.title}
+													</NavLink>
+												</div>
+											)}
 										</div>
-									)
+									);
 								})}
 							</div>
 						)}
@@ -65,17 +82,23 @@ export const Nav = () => {
 							{menuItems.map((menuItem, index) => {
 								return (
 									<React.Fragment key={index}>
-										{(
-											<li><NavLink to={menuItem.idCode}>{menuItem.title}</NavLink></li>
-										)}
+										{
+											<li>
+												<NavLink to={menuItem.idCode}>
+													{menuItem.title}
+												</NavLink>
+											</li>
+										}
 									</React.Fragment>
-								)
+								);
 							})}
 						</ul>
 					</div>
-					<div>
-						jjj
-					</div>
+					{currentMenuItem.idCode !== "welcome" && (
+						<div className="bg-yellow-100 px-4 py-2 content font-bold text-center">
+							{currentMenuItem.description}
+						</div>
+					)}
 				</nav>
 			)}
 		</>
