@@ -157,6 +157,9 @@ export const PageAbout = () => {
                 }}
               >
                 <p className="text-sm leading-relaxed mb-4">
+                 Card #{card.id}
+                </p>
+                <p className="text-sm leading-relaxed mb-4">
                   {card.content}
                 </p>
                 <p className="text-xs font-semibold mt-4">
