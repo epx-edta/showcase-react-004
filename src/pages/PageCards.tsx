@@ -60,7 +60,7 @@ export const PageCards = () => {
     {
       id: 8,
       title: "Robert King",
-      content: "The integration with our existing tools was seamless. We experienced zero downtime during the transition, and the support team was always available.",
+      content: "The integration with our existing tools was seamless. We experienced zero downtime during the transition, and the support team was always available. I can manage tasks and communicate with my team from anywhere, which has made remote work much easier.",
       color: "bg-yellow-600"
     },
     {
