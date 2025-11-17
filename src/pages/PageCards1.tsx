@@ -7,7 +7,7 @@ interface Card {
   color: string;
 }
 
-export const PageAbout = () => {
+export const PageCards1 = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
@@ -17,7 +17,8 @@ export const PageAbout = () => {
     {
       id: 1,
       title: "Jane Doe",
-      content: "Switching to modern software has transformed our workflow. Tasks that used to take hours are now completed in minutes, and our team collaborates more efficiently than ever. The onboarding process was simple and the interface is very user-friendly.",
+      content: "Switching to modern software has transformed our workflow. Tasks that used to take hours are now completed in minutes, and our team collaborates more efficiently than ever."
+        + " The onboarding process was simple and the interface is very user-friendly.",
       color: "bg-orange-500"
     },
     {
@@ -59,7 +60,7 @@ export const PageAbout = () => {
     {
       id: 8,
       title: "Robert King",
-      content: "The integration with our existing tools was seamless. We experienced zero downtime during the transition, and the support team was always available.",
+      content: "The integration with our existing tools was seamless. We experienced zero downtime during the transition, and the support team was always available. I can manage tasks and communicate with my team from anywhere, which has made remote work much easier.",
       color: "bg-yellow-600"
     },
     {
@@ -75,9 +76,6 @@ export const PageAbout = () => {
       color: "bg-indigo-700"
     }
   ];
-
-  // Create multiple copies for infinite scroll
-  const tripleCards = [...cards, ...cards, ...cards];
 
   const handleMouseDown = (e: React.MouseEvent) => {
     setIsDragging(true);
@@ -101,29 +99,10 @@ export const PageAbout = () => {
     setIsDragging(false);
   };
 
-  const handleScroll = () => {
-    if (!containerRef.current || isDragging) return;
-    
-    const container = containerRef.current;
-    const cardWidth = 350 + 24; // card width + gap
-    const setWidth = cards.length * cardWidth;
-    
-    // If scrolled past the second set, jump back to first set
-    if (container.scrollLeft >= setWidth * 2) {
-      container.scrollLeft = container.scrollLeft - setWidth;
-    }
-    // If scrolled before the first set, jump forward to second set
-    else if (container.scrollLeft < setWidth) {
-      container.scrollLeft = container.scrollLeft + setWidth;
-    }
-  };
-
   useEffect(() => {
     const container = containerRef.current;
     if (container) {
-      // Start at the middle set
-      const cardWidth = 350 + 24;
-      container.scrollLeft = cards.length * cardWidth;
+      container.scrollLeft = 0;
     }
   }, []);
 
@@ -141,24 +120,20 @@ export const PageAbout = () => {
           onMouseUp={handleMouseUp}
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
-          onScroll={handleScroll}
           style={{ 
             scrollbarWidth: 'none',
             msOverflowStyle: 'none'
           }}
         >
           <div className="flex items-start gap-6 pb-4" style={{ width: 'max-content' }}>
-            {tripleCards.map((card, index) => (
-              <div
-                key={`${card.id}-${index}`}
+            {cards.map((card) => (
+				<div
+                key={card.id}
                 className={`${card.color} text-white rounded-2xl p-6 shadow-lg flex-shrink-0 select-none`}
                 style={{ 
                   width: '350px'
                 }}
               >
-                <p className="text-sm leading-relaxed mb-4">
-                 Card #{card.id}
-                </p>
                 <p className="text-sm leading-relaxed mb-4">
                   {card.content}
                 </p>
@@ -174,7 +149,7 @@ export const PageAbout = () => {
         </div>
 
         <p className="text-center mt-6 text-gray-600 text-sm">
-          ← Drag cards left and right with your mouse (infinite loop) →
+          ← Drag cards left and right with your mouse →
         </p>
       </div>
 
@@ -185,4 +160,4 @@ export const PageAbout = () => {
       `}</style>
     </div>
   );
-}
+};

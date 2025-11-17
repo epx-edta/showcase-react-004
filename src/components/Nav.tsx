@@ -8,15 +8,18 @@ import React, { useState } from "react";
 const menuItems = [
 	{
 		idCode: 'welcome',
-		title: 'Welcome'
+		title: 'Welcome',
+		description: '',
 	},
 	{
-		idCode: 'cards',
-		title: 'Cards'
+		idCode: 'cards1',
+		title: 'Cards1',
+		description: "Horizontal scrolling cards with finite scroll",
 	},
 	{
-		idCode: 'about',
-		title: 'About'
+		idCode: 'cards2',
+		title: 'Cards2',
+		description: "Horizontal scrolling cards with 2x scroll",
 	}
 ]
 
@@ -69,6 +72,9 @@ export const Nav = () => {
 								)
 							})}
 						</ul>
+					</div>
+					<div>
+						jjj
 					</div>
 				</nav>
 			)}

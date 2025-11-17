@@ -3,10 +3,10 @@ import App from "./App.tsx";
 import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
 import "./index.scss";
 import { PageWelcome } from "./pages/PageWelcome.tsx";
-import { PageAbout } from "./pages/PageAbout.tsx";
 import { Page404 } from "./pages/Page404.tsx";
 import { AppProvider } from "./AppContext.tsx";
-import { PageCards } from "./pages/PageCards.tsx";
+import { PageCards1 } from "./pages/PageCards1.tsx";
+import { PageCards2 } from "./pages/PageCards2.tsx";
 
 const router = createBrowserRouter([
 	{
@@ -19,12 +19,12 @@ const router = createBrowserRouter([
 				element: <PageWelcome />,
 			},
 			{
-				path: "cards",
-				element: <PageCards />,
+				path: "cards1",
+				element: <PageCards1/>,
 			},
 			{
-				path: "about",
-				element: <PageAbout />,
+				path: "cards2",
+				element: <PageCards2/>,
 			},
 			{
 				path: "/",
