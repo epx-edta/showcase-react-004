@@ -141,7 +141,7 @@ export const PageCards = () => {
                   {card.title}
                 </p>
                 <p className="text-xs opacity-80">
-                  2024
+                  2025
                 </p>
               </div>
             ))}
