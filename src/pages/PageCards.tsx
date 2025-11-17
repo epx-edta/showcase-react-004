@@ -95,14 +95,13 @@ export const PageCards = () => {
             msOverflowStyle: 'none'
           }}
         >
-          <div className="flex gap-6 pb-4" style={{ width: 'max-content' }}>
+          <div className="flex items-start gap-6 pb-4" style={{ width: 'max-content' }}>
             {cards.map((card) => (
-              <div
+				<div
                 key={card.id}
                 className={`${card.color} text-white rounded-2xl p-6 shadow-lg flex-shrink-0 select-none`}
                 style={{ 
-                  width: '350px',
-                  minHeight: '300px'
+                  width: '350px'
                 }}
               >
                 <p className="text-sm leading-relaxed mb-4">
