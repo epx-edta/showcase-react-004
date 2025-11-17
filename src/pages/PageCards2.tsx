@@ -102,7 +102,7 @@ export const PageCards2 = () => {
   };
 
   const handleScroll = () => {
-    if (!containerRef.current || isDragging) return;
+    if (!containerRef.current) return;
     
     const container = containerRef.current;
     const cardWidth = 350 + 24; // card width + gap
@@ -110,11 +110,11 @@ export const PageCards2 = () => {
     
     // If scrolled past the second set, jump back to first set
     if (container.scrollLeft >= setWidth * 2) {
-      container.scrollLeft = container.scrollLeft - setWidth;
+      container.scrollLeft = setWidth;
     }
     // If scrolled before the first set, jump forward to second set
-    else if (container.scrollLeft < setWidth) {
-      container.scrollLeft = container.scrollLeft + setWidth;
+    else if (container.scrollLeft <= 0) {
+      container.scrollLeft = setWidth;
     }
   };
 
@@ -128,7 +128,7 @@ export const PageCards2 = () => {
   }, []);
 
   return (
-    <div className="bg-gray-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
       <div className="w-full max-w-7xl">
         <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">
           Customer Testimonials
@@ -157,7 +157,7 @@ export const PageCards2 = () => {
                 }}
               >
                 <p className="text-sm leading-relaxed mb-4">
-                 Card #{card.id}
+                  CARD #{card.id}
                 </p>
                 <p className="text-sm leading-relaxed mb-4">
                   {card.content}

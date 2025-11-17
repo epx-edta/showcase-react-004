@@ -18,7 +18,7 @@ const menuItems = [
 	{
 		idCode: "cards2",
 		title: "Cards2",
-		description: "Horizontal scrolling cards with 2x scroll",
+		description: "Horizontal scrolling cards with infinite scroll",
 	},
 ];
 
