@@ -44,6 +44,36 @@ export const PageCards = () => {
       title: "Sophia Brown",
       content: "Highly recommended! The software is flexible, secure, and adapts perfectly to our growing needs.",
       color: "bg-purple-600"
+    },
+    {
+      id: 6,
+      title: "Carlos Martinez",
+      content: "Our team quickly adapted to the new software. The analytics dashboard provides valuable insights that help us make better decisions every day.",
+      color: "bg-green-600"
+    },
+    {
+      id: 7,
+      title: "Linda Nguyen",
+      content: "I love how customizable the software is. We were able to tailor it to fit our exact workflow, which has improved our efficiency tremendously.",
+      color: "bg-pink-500"
+    },
+    {
+      id: 8,
+      title: "Robert King",
+      content: "The integration with our existing tools was seamless. We experienced zero downtime during the transition, and the support team was always available.",
+      color: "bg-yellow-600"
+    },
+    {
+      id: 9,
+      title: "Ava Patel",
+      content: "Security is a top priority for us, and this software delivers. We feel confident knowing our data is protected and regularly backed up.",
+      color: "bg-red-500"
+    },
+    {
+      id: 10,
+      title: "William Chen",
+      content: "The mobile app is fantastic! I can manage tasks and communicate with my team from anywhere, which has made remote work much easier.",
+      color: "bg-indigo-700"
     }
   ];
 
