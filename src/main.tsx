@@ -7,6 +7,7 @@ import { Page404 } from "./pages/Page404.tsx";
 import { AppProvider } from "./AppContext.tsx";
 import { PageCards1 } from "./pages/PageCards1.tsx";
 import { PageCards2 } from "./pages/PageCards2.tsx";
+import { PageGrid } from "./pages/PageGrid.tsx";
 
 const router = createBrowserRouter([
 	{
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
 			{
 				path: "cards2",
 				element: <PageCards2/>,
+			},
+			{
+				path: "grid",
+				element: <PageGrid/>,
 			},
 			{
 				path: "/",

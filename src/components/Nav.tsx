@@ -20,6 +20,11 @@ const menuItems = [
 		title: "Cards2",
 		description: "Horizontal scrolling cards with infinite scroll",
 	},
+	{
+		idCode: "grid",
+		title: "Grid",
+		description: "Responsive grid with three widths",
+	},
 ];
 
 export const Nav = () => {
