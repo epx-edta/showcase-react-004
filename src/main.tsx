@@ -9,6 +9,7 @@ import { PageCards1 } from "./pages/PageCards1.tsx";
 import { PageCards2 } from "./pages/PageCards2.tsx";
 import { PageGrid } from "./pages/PageGrid.tsx";
 import { PageCards3 } from "./pages/PageCards3.tsx";
+import { PageScroller } from "./pages/PageScroller.tsx";
 
 const router = createBrowserRouter([
 	{
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
 			{
 				path: "grid",
 				element: <PageGrid/>,
+			},
+			{
+				path: "scroller",
+				element: <PageScroller/>,
 			},
 			{
 				path: "/",

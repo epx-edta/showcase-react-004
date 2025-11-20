@@ -30,6 +30,11 @@ const menuItems = [
 		title: "Cards3",
 		description: "Cards with tilted, fuzzy background effect",
 	},
+	{
+		idCode: "scroller",
+		title: "Scroller",
+		description: "Thin, styled, horizontal page scroller",
+	},
 ];
 
 export const Nav = () => {
