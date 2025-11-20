@@ -25,6 +25,11 @@ const menuItems = [
 		title: "Grid",
 		description: "Responsive grid with three widths",
 	},
+	{
+		idCode: "cards3",
+		title: "Cards3",
+		description: "Cards with tilted, fuzzy background effect",
+	},
 ];
 
 export const Nav = () => {
