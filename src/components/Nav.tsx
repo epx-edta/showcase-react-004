@@ -35,6 +35,11 @@ const menuItems = [
 		title: "Scroller",
 		description: "Thin, styled, horizontal page scroller",
 	},
+	{
+		idCode: "image1",
+		title: "Image1",
+		description: "Image that remains in place regardless of length",
+	},
 ];
 
 export const Nav = () => {
