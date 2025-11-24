@@ -40,6 +40,11 @@ const menuItems = [
 		title: "Image1",
 		description: "Image that remains in place regardless of length of text",
 	},
+	{
+		idCode: "expand",
+		title: "Expand",
+		description: "background card that expands with text content of foreground card",
+	},
 ];
 
 export const Nav = () => {
