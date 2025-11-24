@@ -32,10 +32,6 @@ const router = createBrowserRouter([
 				element: <PageCards2/>,
 			},
 			{
-				path: "cards3",
-				element: <PageCards3/>,
-			},
-			{
 				path: "grid",
 				element: <PageGrid/>,
 			},
