@@ -8,9 +8,9 @@ import { AppProvider } from "./AppContext.tsx";
 import { PageCards1 } from "./pages/PageCards1.tsx";
 import { PageCards2 } from "./pages/PageCards2.tsx";
 import { PageGrid } from "./pages/PageGrid.tsx";
-import { PageCards3 } from "./pages/PageCards3.tsx";
 import { PageScroller } from "./pages/PageScroller.tsx";
 import { PageImage1 } from "./pages/PageImage1.tsx";
+import { PageExpand } from "./pages/PageExpand.tsx";
 
 const router = createBrowserRouter([
 	{
@@ -31,10 +31,6 @@ const router = createBrowserRouter([
 				element: <PageCards2/>,
 			},
 			{
-				path: "cards3",
-				element: <PageCards3/>,
-			},
-			{
 				path: "grid",
 				element: <PageGrid/>,
 			},
@@ -45,6 +41,10 @@ const router = createBrowserRouter([
 			{
 				path: "image1",
 				element: <PageImage1/>,
+			},
+			{
+				path: "expand",
+				element: <PageExpand/>,
 			},
 			{
 				path: "/",

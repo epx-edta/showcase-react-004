@@ -26,11 +26,6 @@ const menuItems = [
 		description: "Responsive grid with three widths",
 	},
 	{
-		idCode: "cards3",
-		title: "Cards3",
-		description: "Cards with tilted, fuzzy background effect",
-	},
-	{
 		idCode: "scroller",
 		title: "Scroller",
 		description: "Thin, styled, horizontal page scroller",
@@ -39,6 +34,11 @@ const menuItems = [
 		idCode: "image1",
 		title: "Image1",
 		description: "Image that remains in place regardless of length of text",
+	},
+	{
+		idCode: "expand",
+		title: "Expand",
+		description: "background card that expands with text content of foreground card",
 	},
 ];
 
