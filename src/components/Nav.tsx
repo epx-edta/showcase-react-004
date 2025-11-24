@@ -38,7 +38,7 @@ const menuItems = [
 	{
 		idCode: "image1",
 		title: "Image1",
-		description: "Image that remains in place regardless of length",
+		description: "Image that remains in place regardless of length of text",
 	},
 ];
 
