@@ -12,7 +12,7 @@ export const PageImage1 = () => {
   };
 
   return (
-    <div className="w-full bg-gray-100 px-8 pt-8 pb-[6rem]">
+    <div className="w-full bg-gray-100 px-8 pt-8 pb-[12rem]">
       <div className="mb-6 flex gap-2">
         <button
           onClick={() => setTextLength('short')}
@@ -35,8 +35,18 @@ export const PageImage1 = () => {
       </div>
 
       <div className="relative bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto top-16">
-        {/* Image positioned absolutely at top center */}
+
+        {/* image top center */}
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <img
+            src="images/pageImage1/icon-2.jpg"
+            alt="Profile"
+            className="w-32 h-32 rounded-full border-4 border-white shadow-lg"
+          />
+        </div>
+
+        {/* image top left */}
+        <div className="absolute top-0 left-0 transform -translate-x-1/2 -translate-y-1/2">
           <img
             src="images/pageImage1/icon-3.jpg"
             alt="Profile"
@@ -44,8 +54,17 @@ export const PageImage1 = () => {
           />
         </div>
 
+        {/* image bottom left */}
+        <div className="absolute bottom-0 left-0 transform -translate-x-1/2 translate-y-1/2">
+          <img
+            src="images/pageImage1/icon-9.jpg"
+            alt="Profile"
+            className="w-32 h-32 rounded-full border-4 border-white shadow-lg"
+          />
+        </div>
+
         {/* Content with top padding to accommodate the image */}
-        <div className="pt-24">
+        <div className="py-24">
           <h1 className="text-3xl font-bold text-center mb-4">Sticky Image Header</h1>
           <p className="text-gray-700 leading-relaxed whitespace-pre-line">
             {textContent[textLength]}
