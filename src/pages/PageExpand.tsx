@@ -4,7 +4,7 @@ export const PageExpand = () => {
 	return (
 		<div className="flex gap-2 justify-center flex-wrap items-start">
 			<TiltedBackgroundCard>
-				<p>this is a test</p>
+				<p>This is a test of this card.</p>
 			</TiltedBackgroundCard>
 			<TiltedBackgroundCard>
 				<p>
