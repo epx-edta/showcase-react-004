@@ -12,8 +12,8 @@ export const PageImage1 = () => {
   };
 
   return (
-    <div className="w-full bg-gray-100 p-8">
-      <div className="mb-24 flex gap-2">
+    <div className="w-full bg-gray-100 px-8 pt-8 pb-[6rem]">
+      <div className="mb-6 flex gap-2">
         <button
           onClick={() => setTextLength('short')}
           className={`px-4 py-2 rounded ${textLength === 'short' ? 'bg-blue-600 text-white' : 'bg-white border border-gray-300'}`}
@@ -34,7 +34,7 @@ export const PageImage1 = () => {
         </button>
       </div>
 
-      <div className="relative bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
+      <div className="relative bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto top-16">
         {/* Image positioned absolutely at top center */}
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <img
