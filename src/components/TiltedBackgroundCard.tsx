@@ -18,10 +18,11 @@ export const TiltedBackgroundCard = ({
 				{/* main card: blurs see-through opacity */}
 				<div className="relative max-w-[16.5rem] rounded-xl border border-white backdrop-blur-sm text-gray-200 p-6 z-10">
 					{children}
-                    
-                    <div className="absolute top-[-18px] left-[40%] w-[20px] h-[20px] bg-green-900 rounded bottom-2 right-3 text-xs text-gray-300">
-                <BsInfoSquareFill className="text-[2rem]" />
-                </div>
+
+                    {/* info icon */}
+					<div className="absolute top-[-18px] left-[40%] w-[20px] h-[20px] bg-green-900 rounded bottom-2 right-3 text-xs text-gray-300">
+						<BsInfoSquareFill className="text-[2rem]" />
+					</div>
 				</div>
 			</div>
 		</div>
