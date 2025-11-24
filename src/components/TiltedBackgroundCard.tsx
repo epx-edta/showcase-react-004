@@ -1,4 +1,6 @@
 import { ReactNode } from "react";
+import { BsInfoSquareFill } from "react-icons/bs";
+import { MdSunny } from "react-icons/md";
 
 interface TiltedBackgroundCardProps {
 	children: ReactNode;
@@ -16,6 +18,8 @@ export const TiltedBackgroundCard = ({
 				{/* main card: blurs see-through opacity */}
 				<div className="relative max-w-[16.5rem] rounded-xl border border-white backdrop-blur-sm text-gray-200 p-6 z-10">
 					{children}
+                <BsInfoSquareFill className="text-[2rem]" />
+                <MdSunny className="text-[2rem]" />
 				</div>
 			</div>
 		</div>

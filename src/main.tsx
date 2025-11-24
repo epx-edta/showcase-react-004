@@ -8,7 +8,6 @@ import { AppProvider } from "./AppContext.tsx";
 import { PageCards1 } from "./pages/PageCards1.tsx";
 import { PageCards2 } from "./pages/PageCards2.tsx";
 import { PageGrid } from "./pages/PageGrid.tsx";
-import { PageCards3 } from "./pages/PageCards3.tsx";
 import { PageScroller } from "./pages/PageScroller.tsx";
 import { PageImage1 } from "./pages/PageImage1.tsx";
 import { PageExpand } from "./pages/PageExpand.tsx";
