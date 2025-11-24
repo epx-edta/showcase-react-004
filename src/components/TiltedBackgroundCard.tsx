@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 import { BsInfoSquareFill } from "react-icons/bs";
-import { MdSunny } from "react-icons/md";
 
 interface TiltedBackgroundCardProps {
 	children: ReactNode;
@@ -20,9 +19,14 @@ export const TiltedBackgroundCard = ({
 					{children}
 
                     {/* info icon */}
-					<div className="absolute top-[-18px] left-[40%] w-[20px] h-[20px] bg-green-900 rounded bottom-2 right-3 text-xs text-gray-300">
+					<div className="absolute top-[-18px] left-[40%] w-[20px] h-[20px] bg-green-900 rounded text-xs text-gray-300">
 						<BsInfoSquareFill className="text-[2rem]" />
 					</div>
+
+                    {/* word count */}
+					<p className="absolute bottom-[-14px] right-[-10px] w-fit h-fit p-1 border border-yellow-300 text-yellow-300 bg-green-900 rounded text-xs">
+                        202 words            
+					</p>
 				</div>
 			</div>
 		</div>
