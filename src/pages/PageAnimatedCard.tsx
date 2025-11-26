@@ -1,10 +1,9 @@
-import React from 'react';
-import { TiltedBackgroundCard } from '../components/TiltedBackgroundCard';
+import { TiltedBackgroundCardSimple } from '../components/TiltedBackgroundCardSimple';
 
-const PageAnimatedCard: React.FC = () => {
+export const PageAnimatedCard = () => {
   return (
 		<div className="flex gap-2 justify-center flex-wrap items-start">
-			<TiltedBackgroundCard>
+			<TiltedBackgroundCardSimple>
 				<p>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit.
 					Ipsum sed omnis nulla facilis tempore aperiam perferendis
@@ -13,11 +12,9 @@ const PageAnimatedCard: React.FC = () => {
 					Lorem ipsum dolor sit amet consectetur adipisicing elit.
 					Odio nostrum praesentium doloremque commodi, numquam
 					incidunt porro debitis quam. Officiis nihil reiciendis
-					necessitatibus aut, illo delectus harum itaque iure quo eos.
+					necessitatibus aut, illo delectus harum itaque iure quo ets.
 				</p>
-			</TiltedBackgroundCard>
+      </TiltedBackgroundCardSimple>
 		</div>
   );
 };
-
-export { PageAnimatedCard };
