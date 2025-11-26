@@ -19,7 +19,7 @@ export const TiltedBackgroundCardSimple = ({
 					{children}
 
 					{/* info icon */}
-					<div className="absolute bottom-[-18px] left-[140%] w-[30px] h-[30px] bg-green-900 rounded text-xs text-gray-300">
+					<div className="absolute bottom-[15px] right-[17px] w-[30px] h-[30px] bg-green-900 rounded text-xs text-gray-300">
 						<BsInfoSquareFill className="text-[2rem]" />
 					</div>
 				</div>
