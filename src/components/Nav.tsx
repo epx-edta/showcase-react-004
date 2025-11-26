@@ -43,7 +43,7 @@ const menuItems = [
 	{
 		idCode: "animated-card",
 		title: "Animated Card",
-		description: "an hover-animated card with varients ",
+		description: "a hover-animated card where front and back animates differently",
 	},
 ];
 
