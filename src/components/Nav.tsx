@@ -40,6 +40,11 @@ const menuItems = [
 		title: "Expand",
 		description: "background card that expands with text content of foreground card",
 	},
+	{
+		idCode: "animated-card",
+		title: "Animated Card",
+		description: "an hover-animated card with varients ",
+	},
 ];
 
 export const Nav = () => {
