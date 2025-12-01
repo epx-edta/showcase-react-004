@@ -12,6 +12,7 @@ import { PageScroller } from "./pages/PageScroller.tsx";
 import { PageImage1 } from "./pages/PageImage1.tsx";
 import { PageExpand } from "./pages/PageExpand.tsx";
 import { PageAnimatedCard } from "./pages/PageAnimatedCard";
+import PageFlex001 from "./pages/PageFlex001";
 
 const router = createBrowserRouter([
 	{
@@ -47,10 +48,14 @@ const router = createBrowserRouter([
 				path: "expand",
 				element: <PageExpand/>,
 			},
-            {
-                path: "animated-card",
+			{
+				path: "animated-card",
 				element: <PageAnimatedCard/>,
-            },
+			},
+			{
+				path: "flex001",
+				element: <PageFlex001/>,
+			},
 			{
 				path: "/",
 				element: <Navigate to="/welcome" replace />,
