@@ -38,17 +38,24 @@ const menuItems = [
 	{
 		idCode: "expand",
 		title: "Expand",
-		description: "background card that expands with text content of foreground card",
+		description:
+			"background card that expands with text content of foreground card",
 	},
 	{
 		idCode: "animated-card",
 		title: "Animated Card",
-		description: "a hover-animated card where front and back animates differently",
+		description:
+			"a hover-animated card where front and back animates differently",
 	},
 	{
 		idCode: "flex001",
 		title: "Flex001",
 		description: "A page demonstrating flex layout.",
+	},
+	{
+		idCode: "expandable",
+		title: "Expandable Text",
+		description: "Shows expandable and collapsible text content.",
 	},
 ];
 
