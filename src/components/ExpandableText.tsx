@@ -8,7 +8,9 @@ export const ExpandableText = ({ text }: ExpandableTextProps) => {
   const [showMore, setShowMore] = useState(false);
 
   return (
-    <div>
+    <div
+      className="border border-gray-300 rounded bg-white p-4 shadow-sm"
+    >
       <span
         className={
           showMore
