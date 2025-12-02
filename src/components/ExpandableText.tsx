@@ -39,11 +39,11 @@ export const ExpandableText = ({ text }: ExpandableTextProps) => {
       >
         {showMore ? (
           <>
-            Show less <span aria-label="up caret">△</span>
+            Show less <span aria-label="up caret">^</span>
           </>
         ) : (
           <>
-            Show more <span aria-label="down caret">▽</span>
+            Show more <span aria-label="down caret" style={{ display: 'inline-block', transform: 'rotate(180deg)' }}>^</span>
           </>
         )}
       </button>
