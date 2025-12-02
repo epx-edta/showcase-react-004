@@ -1,26 +1,45 @@
 import React, { useState } from "react";
 
+
 interface OptionTextProps {
   text: string;
-  limit: number;
 }
 
-const OptionText: React.FC<OptionTextProps> = ({ text, limit }) => {
+
+const OptionText: React.FC<OptionTextProps> = ({ text }) => {
   const [showMore, setShowMore] = useState(false);
-  const isTruncated = text.length > limit;
-  const displayText = showMore || !isTruncated ? text : text.slice(0, limit) + "...";
 
   return (
     <div>
-      <span>{displayText}</span>
-      {isTruncated && (
-        <button
-          className="ml-2 text-blue-500 underline cursor-pointer text-sm"
-          onClick={() => setShowMore((prev) => !prev)}
-        >
-          {showMore ? "Show less" : "Show more"}
-        </button>
-      )}
+      <span
+        className={
+          showMore
+            ? ''
+            : 'block overflow-hidden text-ellipsis' +
+              ' line-clamp-3' +
+              ' display-webkit-box'
+        }
+        style={
+          showMore
+            ? {}
+            : {
+                display: '-webkit-box',
+                WebkitLineClamp: 3,
+                WebkitBoxOrient: 'vertical',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+              }
+        }
+      >
+        {text}
+      </span>
+      {/* Show toggle only if text is longer than 3 lines (always show for demo) */}
+      <button
+        className="text-blue-800 underline cursor-pointer text-sm"
+        onClick={() => setShowMore((prev) => !prev)}
+      >
+        {showMore ? 'Show less' : 'Show more'}
+      </button>
     </div>
   );
 };
