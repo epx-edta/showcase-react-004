@@ -13,6 +13,7 @@ import { PageImage1 } from "./pages/PageImage1.tsx";
 import { PageExpand } from "./pages/PageExpand.tsx";
 import { PageAnimatedCard } from "./pages/PageAnimatedCard";
 import PageFlex001 from "./pages/PageFlex001";
+import PageOptionText from "./pages/PageOptionText";
 
 const router = createBrowserRouter([
 	{
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
 			{
 				path: "flex001",
 				element: <PageFlex001/>,
+			},
+			{
+				path: "option-text",
+				element: <PageOptionText/>,
 			},
 			{
 				path: "/",
