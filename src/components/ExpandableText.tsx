@@ -34,10 +34,18 @@ export const ExpandableText = ({ text }: ExpandableTextProps) => {
         {text}
       </span>
       <button
-        className="text-blue-800 underline cursor-pointer text-sm"
+        className="text-blue-800 underline cursor-pointer text-sm font-bold mt-4 flex items-center gap-1"
         onClick={() => setShowMore((prev) => !prev)}
       >
-        {showMore ? 'Show less' : 'Show more'}
+        {showMore ? (
+          <>
+            Show less <span aria-label="up caret">▲</span>
+          </>
+        ) : (
+          <>
+            Show more <span aria-label="down caret">▼</span>
+          </>
+        )}
       </button>
     </div>
   );
