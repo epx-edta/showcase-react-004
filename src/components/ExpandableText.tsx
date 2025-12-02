@@ -1,13 +1,15 @@
 import { useState, useRef, useLayoutEffect } from "react";
+import { twMerge } from "tailwind-merge";
 
 type ExpandableTextProps = {
   text: string;
   numberOfLines?: number;
   expanderLabelMore?: string;
   expanderLabelLess?: string;
+  expanderLabelClassName?: string;
 };
 
-export const ExpandableText = ({ text, numberOfLines = 3, expanderLabelMore = "Show More", expanderLabelLess = "Show Less" }: ExpandableTextProps) => {
+export const ExpandableText = ({ text, numberOfLines = 3, expanderLabelMore = "Show More", expanderLabelLess = "Show Less", expanderLabelClassName = "" }: ExpandableTextProps) => {
   const [showMore, setShowMore] = useState(false);
   const [isTruncated, setIsTruncated] = useState(false);
   const textRef = useRef<HTMLSpanElement>(null);
@@ -46,7 +48,7 @@ export const ExpandableText = ({ text, numberOfLines = 3, expanderLabelMore = "S
       </span>
       {(isTruncated || showMore) && (
         <button
-          className="text-blue-800 cursor-pointer text-sm font-bold mt-4 flex items-center gap-1"
+          className={twMerge("cursor-pointer text-sm font-bold mt-4 flex items-center gap-1", expanderLabelClassName)}
           style={{ alignItems: 'center' }}
           onClick={() => setShowMore((prev) => !prev)}
         >

@@ -20,6 +20,7 @@ export const PageExpandableText = () => {
         numberOfLines={4}
         expanderLabelMore="Mehr anzeigen"
         expanderLabelLess="Weniger anzeigen"
+        expanderLabelClassName="text-green-600"
       />
     </div>
   );
