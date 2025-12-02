@@ -35,15 +35,22 @@ export const ExpandableText = ({ text }: ExpandableTextProps) => {
       </span>
       <button
         className="text-blue-800 cursor-pointer text-sm font-bold mt-4 flex items-center gap-1"
+        style={{ alignItems: 'center' }}
         onClick={() => setShowMore((prev) => !prev)}
       >
         {showMore ? (
           <>
-            Show less <span aria-label="up caret">^</span>
+            <span>Show less</span>
+            <span aria-label="up caret" style={{ position: 'relative', top: '2px', display: 'inline-block' }}>
+              ^
+            </span>
           </>
         ) : (
           <>
-            Show more <span aria-label="down caret" style={{ display: 'inline-block', transform: 'rotate(180deg)' }}>^</span>
+            <span>Show more</span>
+            <span aria-label="down caret" style={{ position: 'relative', top: '-2px', display: 'inline-block', transform: 'rotate(180deg)' }}>
+              ^
+            </span>
           </>
         )}
       </button>
