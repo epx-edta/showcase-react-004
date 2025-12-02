@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useLayoutEffect } from "react";
 
 type ExpandableTextProps = {
   text: string;
@@ -6,10 +6,22 @@ type ExpandableTextProps = {
 
 export const ExpandableText = ({ text }: ExpandableTextProps) => {
   const [showMore, setShowMore] = useState(false);
+  const [isTruncated, setIsTruncated] = useState(false);
+  const textRef = useRef<HTMLSpanElement>(null);
+
+  useLayoutEffect(() => {
+    const element = textRef.current;
+    if (element) {
+      setIsTruncated(element.scrollHeight > element.clientHeight);
+    }
+  }, [text]);
 
   return (
-    <div>
+    <div
+      className="border border-gray-300 rounded bg-white p-4 shadow-sm"
+    >
       <span
+        ref={textRef}
         className={
           showMore
             ? ''
@@ -31,12 +43,29 @@ export const ExpandableText = ({ text }: ExpandableTextProps) => {
       >
         {text}
       </span>
-      <button
-        className="text-blue-800 underline cursor-pointer text-sm"
-        onClick={() => setShowMore((prev) => !prev)}
-      >
-        {showMore ? 'Show less' : 'Show more'}
-      </button>
+      {(isTruncated || showMore) && (
+        <button
+          className="text-blue-800 cursor-pointer text-sm font-bold mt-4 flex items-center gap-1"
+          style={{ alignItems: 'center' }}
+          onClick={() => setShowMore((prev) => !prev)}
+        >
+          {showMore ? (
+            <>
+              <span>Show less</span>
+              <span aria-label="up caret" style={{ position: 'relative', top: '2px', display: 'inline-block' }}>
+                ^
+              </span>
+            </>
+          ) : (
+            <>
+              <span>Show more</span>
+              <span aria-label="down caret" style={{ position: 'relative', top: '-2px', display: 'inline-block', transform: 'rotate(180deg)' }}>
+                ^
+              </span>
+            </>
+          )}
+        </button>
+      )}
     </div>
   );
 };
