@@ -31,7 +31,6 @@ export const ExpandableText = ({ text }: ExpandableTextProps) => {
       >
         {text}
       </span>
-      {/* Show toggle only if text is longer than 3 lines (always show for demo) */}
       <button
         className="text-blue-800 underline cursor-pointer text-sm"
         onClick={() => setShowMore((prev) => !prev)}
