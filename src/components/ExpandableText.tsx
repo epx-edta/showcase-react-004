@@ -2,9 +2,12 @@ import { useState, useRef, useLayoutEffect } from "react";
 
 type ExpandableTextProps = {
   text: string;
+  numberOfLines?: number;
+  expanderLabelMore?: string;
+  expanderLabelLess?: string;
 };
 
-export const ExpandableText = ({ text }: ExpandableTextProps) => {
+export const ExpandableText = ({ text, numberOfLines = 3, expanderLabelMore = "Show More", expanderLabelLess = "Show Less" }: ExpandableTextProps) => {
   const [showMore, setShowMore] = useState(false);
   const [isTruncated, setIsTruncated] = useState(false);
   const textRef = useRef<HTMLSpanElement>(null);
@@ -25,20 +28,18 @@ export const ExpandableText = ({ text }: ExpandableTextProps) => {
         className={
           showMore
             ? ''
-            : 'block overflow-hidden text-ellipsis' +
-              ' line-clamp-3' +
-              ' display-webkit-box'
+            : 'block overflow-hidden text-ellipsis' + ' line-clamp-' + numberOfLines.toString() + ' display-webkit-box'
         }
         style={
           showMore
             ? {}
             : {
-                display: '-webkit-box',
-                WebkitLineClamp: 3,
-                WebkitBoxOrient: 'vertical',
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
-              }
+              display: '-webkit-box',
+              WebkitLineClamp: numberOfLines,
+              WebkitBoxOrient: 'vertical',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+            }
         }
       >
         {text}
@@ -51,14 +52,14 @@ export const ExpandableText = ({ text }: ExpandableTextProps) => {
         >
           {showMore ? (
             <>
-              <span>Show less</span>
+              <span>{expanderLabelLess}</span>
               <span aria-label="up caret" style={{ position: 'relative', top: '2px', display: 'inline-block' }}>
                 ^
               </span>
             </>
           ) : (
             <>
-              <span>Show more</span>
+              <span>{expanderLabelMore}</span>
               <span aria-label="down caret" style={{ position: 'relative', top: '-2px', display: 'inline-block', transform: 'rotate(180deg)' }}>
                 ^
               </span>
