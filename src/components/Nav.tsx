@@ -45,6 +45,11 @@ const menuItems = [
 		title: "Animated Card",
 		description: "a hover-animated card where front and back animates differently",
 	},
+	{
+		idCode: "flex001",
+		title: "Flex001",
+		description: "A page demonstrating flex layout.",
+	},
 ];
 
 export const Nav = () => {
