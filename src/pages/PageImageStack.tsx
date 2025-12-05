@@ -2,9 +2,9 @@ import { ImageStack } from '../components/ImageStack';
 
 export const PageImageStack = () => {
   const images = [
-    '/images/sunset_mountains.png',
-    '/images/forest_path.png',
-    '/images/ocean_waves.png',
+    '/images/pageImageStack/image001.png',
+    '/images/pageImageStack/image002.png',
+    '/images/pageImageStack/image003.png',
   ];
 
   return (
