@@ -14,6 +14,7 @@ import { PageExpand } from "./pages/PageExpand.tsx";
 import { PageAnimatedCard } from "./pages/PageAnimatedCard";
 import PageFlex001 from "./pages/PageFlex001";
 import { PageExpandableText } from "./pages/PageExpandableText.tsx";
+import { PageImageStack } from "./pages/PageImageStack.tsx";
 
 const router = createBrowserRouter([
 	{
@@ -58,8 +59,12 @@ const router = createBrowserRouter([
 				element: <PageFlex001/>,
 			},
 			{
-				path: "expandable",
+				path: "expandable-text",
 				element: <PageExpandableText/>,
+			},
+			{
+				path: "image-stack",
+				element: <PageImageStack/>
 			},
 			{
 				path: "/",

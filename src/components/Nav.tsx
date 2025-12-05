@@ -53,9 +53,14 @@ const menuItems = [
 		description: "A page demonstrating flex layout.",
 	},
 	{
-		idCode: "expandable",
+		idCode: "expandable-text",
 		title: "Expandable Text",
 		description: "Shows expandable and collapsible text content.",
+	},
+	{
+		idCode: "image-stack",
+		title: "Image Stack",
+		description: "Image stack with text content.",
 	},
 ];
 
