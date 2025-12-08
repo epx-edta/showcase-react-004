@@ -62,6 +62,11 @@ const menuItems = [
 		title: "Image Stack",
 		description: "Image stack with text content.",
 	},
+	{
+		idCode: "image-viewer",
+		title: "Image Viewer",
+		description: "show images, automatic flip, allow user to pause and flip",
+	},
 ];
 
 export const Nav = () => {
