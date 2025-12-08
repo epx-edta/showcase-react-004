@@ -105,19 +105,19 @@ export const Nav = () => {
 										<div key={index}>
 											{menuItem.idCode !==
 												currentMenuItem.idCode && (
-												<div className="mt-[.2rem]">
-													<NavLink
-														to={menuItem.idCode}
-														onClick={() =>
-															setShowMobileMenu(
-																false
-															)
-														}
-													>
-														{menuItem.title}
-													</NavLink>
-												</div>
-											)}
+													<div className="mt-[.2rem]">
+														<NavLink
+															to={menuItem.idCode}
+															onClick={() =>
+																setShowMobileMenu(
+																	false
+																)
+															}
+														>
+															{menuItem.title}
+														</NavLink>
+													</div>
+												)}
 										</div>
 									);
 								})}
@@ -125,7 +125,7 @@ export const Nav = () => {
 						)}
 					</div>
 					<div className="hidden md:block bg-slate-500 px-4 py-2 content">
-						<ul className="flex gap-4">
+						<ul className="flex gap-x-4 gap-y-0 flex-wrap">
 							{menuItems.map((menuItem, index) => {
 								return (
 									<React.Fragment key={index}>
