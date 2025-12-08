@@ -73,7 +73,7 @@ export const ImageViewer = ({ pathAndFileNames }: ImageViewerProps) => {
                 {/* Left Arrow */}
                 <button
                     onClick={handlePrevious}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-orange-500 hover:bg-orange-600 text-white p-2 rounded-full transition-all duration-300 hover:scale-110 active:scale-95 shadow-lg"
+                    className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-orange-500 hover:bg-orange-600 text-white p-2 rounded transition-all duration-300 hover:scale-110 active:scale-95 shadow-lg"
                     aria-label="Previous image"
                 >
                     <svg
@@ -91,7 +91,7 @@ export const ImageViewer = ({ pathAndFileNames }: ImageViewerProps) => {
                 {/* Right Arrow */}
                 <button
                     onClick={handleNext}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-orange-500 hover:bg-orange-600 text-white p-2 rounded-full transition-all duration-300 hover:scale-110 active:scale-95 shadow-lg"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-orange-500 hover:bg-orange-600 text-white p-2 rounded transition-all duration-300 hover:scale-110 active:scale-95 shadow-lg"
                     aria-label="Next image"
                 >
                     <svg
@@ -114,8 +114,8 @@ export const ImageViewer = ({ pathAndFileNames }: ImageViewerProps) => {
                         key={index}
                         onClick={() => setCurrentIndex(index)}
                         className={`h-2 rounded-full transition-all duration-300 ${index === currentIndex
-                                ? 'bg-orange-500 w-8'
-                                : 'bg-gray-100 w-2 hover:bg-gray-200'
+                            ? 'bg-orange-500 w-8'
+                            : 'bg-gray-100 w-2 hover:bg-gray-200'
                             }`}
                         aria-label={`Go to image ${index + 1}`}
                     />
