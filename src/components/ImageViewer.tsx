@@ -114,8 +114,8 @@ export const ImageViewer = ({ pathAndFileNames }: ImageViewerProps) => {
                         key={index}
                         onClick={() => setCurrentIndex(index)}
                         className={`h-2 rounded-full transition-all duration-300 ${index === currentIndex
-                                ? 'bg-black w-8'
-                                : 'bg-gray-400 w-2 hover:bg-gray-300'
+                                ? 'bg-orange-500 w-8'
+                                : 'bg-gray-100 w-2 hover:bg-gray-200'
                             }`}
                         aria-label={`Go to image ${index + 1}`}
                     />
