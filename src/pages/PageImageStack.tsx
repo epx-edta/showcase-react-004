@@ -2,8 +2,8 @@ import { ImageStack } from '../components/ImageStack';
 
 export const PageImageStack = () => {
   const images = [
-    '/images/pageImageStack/image001.png',
     '/images/pageImageStack/image002.png',
+    '/images/pageImageStack/image001.png',
     '/images/pageImageStack/image003.png',
   ];
 
