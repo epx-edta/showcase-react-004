@@ -63,7 +63,7 @@ export const ImageViewer2 = ({ pathAndFileNames }: ImageViewer2Props) => {
     return (
         <div className="space-y-4">
             <div
-                className="relative w-full aspect-[16/9] bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg overflow-hidden shadow-2xl"
+                className="relative w-full aspect-[16/9] rounded-lg overflow-hidden shadow-2xl"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >
