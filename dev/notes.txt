@@ -1,0 +1,2 @@
+- git remote add tinfo https://github.com/edwardtanguay/showcase-react-004.git
+- git push tinfo main
