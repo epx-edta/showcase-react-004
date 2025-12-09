@@ -67,6 +67,11 @@ const menuItems = [
 		title: "Image Viewer",
 		description: "show images, automatic flip, allow user to pause and flip",
 	},
+	{
+		idCode: "image-viewer2",
+		title: "Image Viewer2",
+		description: "same as image view but infinite scroll and showing prev/next images",
+	},
 ];
 
 export const Nav = () => {
