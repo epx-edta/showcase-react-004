@@ -143,7 +143,7 @@ export const ImageViewer2 = ({ pathAndFileNames }: ImageViewer2Props) => {
                         onClick={() => handleDotClick(index)}
                         className={`h-2 rounded-full transition-all duration-300 ${getModIndex(currentIndex) === index
                             ? 'bg-orange-500 w-8'
-                            : 'bg-gray-400 w-2 hover:bg-gray-300'
+                            : 'bg-gray-800 w-2 hover:bg-gray-300'
                             }`}
                         aria-label={`Go to image ${index + 1}`}
                     />
