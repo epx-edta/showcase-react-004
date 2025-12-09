@@ -101,7 +101,7 @@ export const ImageViewer2 = ({ pathAndFileNames }: ImageViewer2Props) => {
                 {/* Left Arrow */}
                 <button
                     onClick={handlePrevious}
-                    className="absolute left-[17%] top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/20 text-white/50 hover:text-white p-2 rounded-full transition-all duration-300 hover:scale-110 active:scale-95 backdrop-blur-md border border-white/10"
+                    className={`absolute left-[17%] top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/20 text-white/50 hover:text-white p-2 rounded-full transition-all duration-300 hover:scale-110 active:scale-95 backdrop-blur-md border border-white/10 ${isHovered ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
                     aria-label="Previous image"
                 >
                     <svg
@@ -119,7 +119,7 @@ export const ImageViewer2 = ({ pathAndFileNames }: ImageViewer2Props) => {
                 {/* Right Arrow */}
                 <button
                     onClick={handleNext}
-                    className="absolute right-[17%] top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/20 text-white/50 hover:text-white p-2 rounded-full transition-all duration-300 hover:scale-110 active:scale-95 backdrop-blur-md border border-white/10"
+                    className={`absolute right-[17%] top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/20 text-white/50 hover:text-white p-2 rounded-full transition-all duration-300 hover:scale-110 active:scale-95 backdrop-blur-md border border-white/10 ${isHovered ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
                     aria-label="Next image"
                 >
                     <svg
