@@ -77,12 +77,12 @@ export const ImageViewer2 = ({ pathAndFileNames }: ImageViewer2Props) => {
                         return (
                             <div
                                 key={virtualIndex}
-                                className="absolute transition-all duration-500 ease-out h-[90%]" 
+                                className="absolute transition-all duration-500 ease-out h-[90%]"
                                 style={{
                                     width: '80%',
                                     left: '50%',
-                                    transform: `translateX(calc(-50% + ${offset * 105}%))`, 
-                                    opacity: offset === 0 ? 1 : 0.5, 
+                                    transform: `translateX(calc(-50% + ${offset * 105}%))`,
+                                    opacity: offset === 0 ? 1 : 0.5,
                                     zIndex: offset === 0 ? 10 : 5,
                                     scale: offset === 0 ? 1 : 0.85,
                                     pointerEvents: offset === 0 ? 'auto' : 'none',
@@ -101,7 +101,7 @@ export const ImageViewer2 = ({ pathAndFileNames }: ImageViewer2Props) => {
                 {/* Left Arrow */}
                 <button
                     onClick={handlePrevious}
-                    className="absolute left-[17%] top-1/2 -translate-y-1/2 z-20 bg-orange-500/80 hover:bg-orange-600 text-white p-2 rounded-full transition-all duration-300 hover:scale-110 active:scale-95 shadow-lg backdrop-blur-sm"
+                    className="absolute left-[17%] top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/20 text-white/50 hover:text-white p-2 rounded-full transition-all duration-300 hover:scale-110 active:scale-95 backdrop-blur-md border border-white/10"
                     aria-label="Previous image"
                 >
                     <svg
@@ -119,7 +119,7 @@ export const ImageViewer2 = ({ pathAndFileNames }: ImageViewer2Props) => {
                 {/* Right Arrow */}
                 <button
                     onClick={handleNext}
-                    className="absolute right-[17%] top-1/2 -translate-y-1/2 z-20 bg-orange-500/80 hover:bg-orange-600 text-white p-2 rounded-full transition-all duration-300 hover:scale-110 active:scale-95 shadow-lg backdrop-blur-sm"
+                    className="absolute right-[17%] top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/20 text-white/50 hover:text-white p-2 rounded-full transition-all duration-300 hover:scale-110 active:scale-95 backdrop-blur-md border border-white/10"
                     aria-label="Next image"
                 >
                     <svg
